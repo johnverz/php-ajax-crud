@@ -47,8 +47,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
                 <td>' . $row['gender'] . '</td>
                 <td>' . $formattedDate . '</td>
                 <td>
-                    <button class="btn btn-warning btn-sm" data-record-id="' . $row['id'] . '">Edit</button>
-                    <button class="btn btn-danger btn-sm" data-record-id="' . $row['id'] . '">Delete</button>
+                    <button class="btn btn-warning btn-sm float-right ml-2" data-record-id="' . $row['id'] . '">Edit</button>
+                    <button class="btn btn-danger btn-sm float-right" data-record-id="' . $row['id'] . '">Delete</button>
                 </td>
               </tr>';
     }

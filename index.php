@@ -40,7 +40,7 @@
             <th>Middle Name</th>
             <th>Gender</th>
             <th>Birth Date</th>
-            <th>Action</th>
+            <th></th>
         </tr>
         </thead>
         <tbody id="tableBody">
