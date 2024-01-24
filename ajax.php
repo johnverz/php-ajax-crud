@@ -37,13 +37,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 
     $counter = 1; //counter
     while ($row = $result->fetchArray()) {
+        // Format the birthdate in PHP
+        $formattedDate = date('F j, Y', strtotime($row['bdate']));
         echo '<tr>
                 <td>' . $counter++ . '</td>
                 <td>' . $row['last_name'] . '</td>
                 <td>' . $row['first_name'] . '</td>
                 <td>' . $row['middle_name'] . '</td>
                 <td>' . $row['gender'] . '</td>
-                <td>' . $row['bdate'] . '</td>
+                <td>' . $formattedDate . '</td>
                 <td>
                     <button class="btn btn-warning btn-sm" data-record-id="' . $row['id'] . '">Edit</button>
                     <button class="btn btn-danger btn-sm" data-record-id="' . $row['id'] . '">Delete</button>
